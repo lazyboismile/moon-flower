@@ -5,19 +5,17 @@
 <body>
   <div class="signup-container">
     <form onsubmit="return validateSignupForm()" action="/admin/signup" method="POST" enctype="multipart/form-data">
-      <div class="signup-frame" style="width: 650px">
+      <div class="signup-frame" style="width: 850px">
         <div class="signup-top">
           <span>Signup</span>
-          <div>Go back <a href="/admin" style="color: #6440fb">Home</a></div>
+          <a href="/admin" class="nav-link">Home</a>
           <p>
-            Already signed up?
-            <a href="/admin/login" style="color: #6440fb">Login</a>
+            <a href="/admin/login" class="nav-link">Login</a>
           </p>
         </div>
 
         <div class="sign-input-frame" style="justify-content: space-between">
           <div class="sign-up-frame">
-            <label>Restaurant *</label>
             <input
               type="text"
               name="memberNick"
@@ -27,7 +25,6 @@
             />
           </div>
           <div class="sign-up-frame">
-            <label>Phone *</label>
             <input
               type="text"
               name="memberPhone"
@@ -39,7 +36,6 @@
         </div>
         <div class="sign-input-frame" style="justify-content: space-between">
           <div class="sign-up-frame">
-            <label>Password *</label>
             <input
               type="password"
               name="memberPassword"
@@ -49,7 +45,6 @@
             />
           </div>
           <div class="sign-up-frame">
-            <label>Repeat password *</label>
             <input
               type="password"
               name="confirmPassword"
@@ -62,7 +57,7 @@
 
         <div class="signup-input-frame">
           <div class="media-frame">
-            <img class="upload-img-frame" src="/img/default.jpeg" />
+            <img class="upload-img-frame" src="/img/default.jpg" />
             <div class="upload-container">
               <span class="media-text">Product image</span>
               <div
@@ -86,8 +81,7 @@
               </div>
               <p class="thumbnail-desc">
                 Please upload restaurant image.<br />
-                Attention only:.jpg, .jpeg, or .png. <br />
-                formats allowed!
+                Attention only: <span style="color: #e74c3c;">.jpg, .jpeg, or .png</span> formats allowed!
               </p>
             </div>
           </div>

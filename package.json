@@ -13,6 +13,7 @@
   "author": "TONY",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.21",
     "bcryptjs": "^2.4.3",
     "connect-mongodb-session": "^3.1.1",
     "cookie-parser": "^1.4.6",
@@ -27,6 +28,11 @@
     "mongoose": "^6.2.9",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "postcss": "^8.5.6",
+    "postcss-advanced-variables": "^5.0.0",
+    "postcss-cli": "^11.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-preset-env": "^10.2.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

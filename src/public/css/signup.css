@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins',  sans-serif;
+}
+
 .signup-container {
   position: relative;
   width: 100%;
@@ -6,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #c9d6ff, #e2e2e2, #23a6d5, #23d5ab);
   animation: gradient 15s ease infinite;
   -webkit-animation: gradient 15s ease infinite;
   background-size: 200% 200%;
@@ -19,13 +26,102 @@
 
 .signup-container .signup-frame {
   position: relative;
-  width: 420px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   background: #ffffff;
   padding: 25px;
+}
+
+.signup-container .signup-frame .signup-top {
+  position: relative;
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%); /* Gradient background */
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  gap: 20px; /* Space between flex items */
+}
+
+.signup-container .signup-frame .signup-top span {
+  font-size: 28px;
+  font-weight: 600;
+  color: #6440fb; /* Matches link color for consistency */
+  display: flex;
+  align-items: center;
+}
+
+.signup-container .signup-frame .signup-top span::after {
+  content: ""; /* Icon */
+  margin-left: 8px; /* Space after text */
+  color: #a65cff; /* Distinct icon color */
+}
+
+.signup-container .signup-frame .nav-link {
+  height: 50px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #6440fb;
+  border: 1px solid #6440fb;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-container .signup-frame .nav-link::after {
+  content: attr(data-icon); /* Use data-icon for dynamic icons */
+  margin-left: 5px;
+  color: #a65cff;
+}
+
+.signup-container .signup-frame .nav-link:hover {
+  color: #a65cff; /* Lighter shade on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.signup-container .signup-frame .signup-top:hover {
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+  .signup-container .signup-frame .signup-top {
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .signup-container .signup-frame .signup-top span {
+    font-size: 24px;
+  }
+
+  .signup-container .signup-frame .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container .signup-frame .signup-top {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .signup-container .signup-frame .signup-top span {
+    font-size: 20px;
+  }
 }
 
 .signup-container .signup-frame .sign-input-frame {
@@ -45,15 +141,6 @@
   flex-direction: column;
 }
 
-.signup-container .sign-up-frame label {
-  margin-bottom: 0px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-}
-
 .signup-container .sign-up-frame input {
   position: relative;
   margin-top: 10px;
@@ -61,8 +148,10 @@
   width: 100%;
   height: 55px;
   background: #f6f5f5;
+  color: #333;
   border: 1px solid #dddddd;
   border-radius: 8px;
+  outline: none;
 }
 
 .signup-container .media-frame {
@@ -77,7 +166,7 @@
 
 .signup-container .media-frame .upload-img-frame {
   position: relative;
-  width: 275px;
+  width: 375px;
   height: 93%;
   display: flex;
   border-radius: 15px;
@@ -134,9 +223,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #6a7a99;
-  border-radius: 0px 8px 8px 0px;
-  font-family: "GT Walsheim Pro";
+  background: #7494ec;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -157,12 +247,87 @@
 
 .signup-container .thumbnail-desc {
   margin-top: 25px;
-  font-family: "GT Walsheim Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
   color: #4f547b;
+  background: linear-gradient(90deg, #4f547b 0%, #6b7099 100%); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  position: relative;
+} 
+
+.signup-container .thumbnail-desc::before {
+  content: "📤";
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.signup-container .thumbnail-desc:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.signup-btn.btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(90deg, #7494ec 0%, #5a82e5 100%); /* Gradient background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  outline: none; /* Remove default focus outline */
+}
+
+.signup-btn.btn:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #5a82e5 0%, #406ed9 100%);
+}
+
+.signup-btn.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-btn.btn:focus {
+  outline: 2px solid #5a82e5; 
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .signup-btn.btn {
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-btn.btn {
+    height: 38px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container .thumbnail-desc {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 12px;
+  }
 }
 
 /* Background animation */

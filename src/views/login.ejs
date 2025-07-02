@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/css/login.css" />
 
 <body>
-  <form class="login-container" action="/admin/login" METHOD="POST">
+  <!-- <form class="login-container" action="/admin/login" METHOD="POST">
     <div class="login-frame">
       <div class="login-top">
         <span>Enter</span>
@@ -39,7 +39,53 @@
       </div>
       <button class="login-btn btn" name="login" type="submit">Login</button>
     </div>
-  </form>
+  </form> -->
+
+  <div class="container">
+    <div class="form-box login">
+      <form action="/admin/login" METHOD="POST">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            name="memberNick"
+            class="member-nick"
+            placeholder="Username"
+            value=""
+            required
+          >
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            name="memberPassword"
+            class="member-password"
+            placeholder="Password"
+            value=""
+            required
+          >
+          <i class='bx  bx-lock-keyhole'  ></i> 
+        </div>
+        <button class="btn" name="login" type="submit">Login</button>
+        <p>or login with social platforms</p>
+        <div class="social-icons">
+          <a href="https://www.google.com/"><i class='bxl  bx-google'  ></i> </a>
+          <a href="https://www.facebook.com/"><i class='bxl  bx-facebook'  ></i> </a>
+          <a href="https://github.com/"><i class='bxl  bx-github'  ></i> </a>
+          <a href="https://www.linkedin.com/"><i class='bxl  bx-linkedin'  ></i> </a>
+        </div>
+      </form>
+    </div>
+
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Hello, Welcome!</h1>
+        <p>Don't have an account?</p>
+        <button class="btn register-btn" onclick="location.href='/admin/signup'">Signup</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 <%- include('includes/footer') %>
