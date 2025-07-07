@@ -192,7 +192,7 @@
     /* lg-n-above */
     @media (width >=1024px) {
       --radius: min(620px, 40cqi);
-      --offset-per-child: calc(360deg / (var(--nth-siblings) + 2));
+      --offset-per-child: calc(360deg / (var(--nth-siblings) + 1));
       --angle-offset: calc(var(--nth-child) * var(--offset-per-child));
       --inline-ratio: 1/1;
       /* Keeps the horizontal scaling unchanged */
