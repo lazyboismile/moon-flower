@@ -1,5 +1,8 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({
+    path: process.env.NODE_ENV === 'production' ? '.env.production' : '.env',
+});
+// ****
 import app from "./app";
 
 import mongoose from 'mongoose';
@@ -9,7 +12,7 @@ mongoose
     .then((data) => {
         console.log('MongoDB Connected...');
         const PORT = process.env.PORT ?? 3003;
-        app.listen(PORT, () =>  {
+        app.listen(PORT, () => {
             console.info(`Server running on port: ${PORT}`);
             console.info(`Admin project on http://localhost:${PORT}/admin \n`);
         });
